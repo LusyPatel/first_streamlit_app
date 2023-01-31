@@ -53,7 +53,7 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.text(my_data_rows)
 
-
+fruit_load_list=my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
 # streamlit.dataframe(fruit_load_list)
 # my_fruit_list=fruit_load_list.set_index
 # lets put a picklist for the customerts so they can pick the fruit of their choice in the smoothie.
