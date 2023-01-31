@@ -57,7 +57,7 @@ fruit_load_list=my_cur.execute("select * from pc_rivery_db.public.fruit_load_lis
 # streamlit.dataframe(fruit_load_list)
 # my_fruit_list=fruit_load_list.set_index
 # lets put a picklist for the customerts so they can pick the fruit of their choice in the smoothie.
-streamlit.multiselect('pick some fruit from this list:', list(fruit_load_list.index))
+streamlit.multiselect('pick some fruit from this list:', list(fruit_load_list))
 #streamlit.dataframe(my_fruit_list)
 #Fruit_Selected=streamlit.multiselect('pick some fruit from this list:', list(my_fruit_list.index),'Avocado')
 #Fruit_To_Show=my_fruit_list.loc[Fruit_Selected]
