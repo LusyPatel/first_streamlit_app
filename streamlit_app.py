@@ -55,10 +55,10 @@ streamlit.text(my_data_rows)
 
 
 # streamlit.dataframe(fruit_load_list)
-my_fruit_list=fruit_load_list.set_index
+# my_fruit_list=fruit_load_list.set_index
 # lets put a picklist for the customerts so they can pick the fruit of their choice in the smoothie.
-streamlit.multiselect('pick some fruit from this list:', list(my_fruit_list.index))
-streamlit.dataframe(my_fruit_list)
-Fruit_Selected=streamlit.multiselect('pick some fruit from this list:', list(my_fruit_list.index),'Avocado')
-Fruit_To_Show=my_fruit_list.loc[Fruit_Selected]
-streamlit.dataframe(Fruit_To_Show)
+streamlit.multiselect('pick some fruit from this list:', list(fruit_load_list.index))
+#streamlit.dataframe(my_fruit_list)
+#Fruit_Selected=streamlit.multiselect('pick some fruit from this list:', list(my_fruit_list.index),'Avocado')
+#Fruit_To_Show=my_fruit_list.loc[Fruit_Selected]
+#streamlit.dataframe(Fruit_To_Show)
