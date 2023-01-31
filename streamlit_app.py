@@ -62,7 +62,7 @@ streamlit.multiselect('pick some fruit from this list:', list(fruit_load_list))
 #Fruit_Selected=streamlit.multiselect('pick some fruit from this list:', list(my_fruit_list.index),'Avocado')
 #Fruit_To_Show=my_fruit_list.loc[Fruit_Selected]
 #streamlit.dataframe(Fruit_To_Show)
-
+"""
 streamlit.header('fruityvise fruit advice')
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
@@ -74,7 +74,7 @@ try:
 except URLError as e:
   streamlit.error()
 
-"""
+
 
 streamlit.header('fruityvise fruit advice')
 def get_fruityvise_data(this_fruit_choice):
@@ -92,3 +92,17 @@ try:
     streamlit.dataframe(back_from_function)
 
 """
+
+
+
+streamlit.header("The fruit load list contains:")
+def get_fruit_load_list():
+  with my_cnx.cursor() as my_cur
+  my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
+  return my_cur.fetchall()
+
+if streamlit.button("Get fruit load list"):
+  my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+  my_data_rows=get_fruit_load_list()
+  streamlit.dataframe(my_data_rows)
+  
