@@ -74,7 +74,7 @@ try:
 except URLError as e:
   streamlit.error()
 
-
+"""
 
 streamlit.header('fruityvise fruit advice')
 def get_fruityvise_data(this_fruit_choice):
@@ -91,3 +91,4 @@ try:
     back_from_function=get_fruityvise_data(fruit_choice)
     streamlit.dataframe(back_from_function)
 
+"""
